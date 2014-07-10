@@ -1,0 +1,9 @@
+services:
+    paybas.rankpoststyling.listener:
+        class: paybas\rankpoststyling\event\listener
+        arguments:
+            - @cache
+            - @request
+            - @user
+        tags:
+            - { name: event.listener }

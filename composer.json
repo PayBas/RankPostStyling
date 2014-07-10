@@ -1,0 +1,31 @@
+{
+    "name": "paybas/rankpoststyling",
+    "type": "phpbb-extension",
+    "description": "This extension adds a CSS rule option to user ranks, which can be used style posts of users with those ranks.",
+    "homepage": "http://paybas.com/",
+    "version": "1.0.0",
+    "time": "2014-07-10",
+    "license": "GPL-2.0",
+    "authors": [
+        {
+            "name": "PayBas",
+            "email": "admin@pbwow.com",
+            "homepage": "http://www.paybas.com",
+            "role": "Lead Developer"
+        }
+    ],
+    "require": {
+        "php": ">=5.3"
+    },
+    "extra": {
+        "display-name": "Rank Post Styling",
+        "soft-require": {
+             "phpbb/phpbb": "3.1.*@dev"
+        },
+        "version-check": {
+            "host": "paybas.github.io",
+            "directory": "/RankPostStyling",
+            "filename": "version.json"
+        }
+    }
+}
