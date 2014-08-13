@@ -3,7 +3,7 @@
     "type": "phpbb-extension",
     "description": "This extension adds a CSS rule option to user ranks, which can be used style posts of users with those ranks.",
     "homepage": "http://paybas.com/",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "time": "2014-07-10",
     "license": "GPL-2.0",
     "authors": [
@@ -15,7 +15,8 @@
         }
     ],
     "require": {
-        "php": ">=5.3"
+        "php": ">=5.3",
+        "composer/installers": "~1.0"
     },
     "extra": {
         "display-name": "Rank Post Styling",
