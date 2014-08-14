@@ -11,11 +11,11 @@
 namespace paybas\rankpoststyling\event;
 
 /**
-* @ignore
-*/
+ * @ignore
+ */
 if (!defined('IN_PHPBB'))
 {
-    exit;
+	exit;
 }
 
 use Symfony\Component\EventDispatcher\EventSubscriberInterface;
@@ -31,7 +31,6 @@ class listener implements EventSubscriberInterface
 	/** @var \phpbb\user */
 	protected $user;
 
-	/** @var local */
 	protected $ranks;
 
 	public function __construct(\phpbb\cache\service $cache, \phpbb\request\request_interface $request, \phpbb\user $user)
@@ -46,18 +45,18 @@ class listener implements EventSubscriberInterface
 	static public function getSubscribedEvents()
 	{
 		return array(
-			'core.acp_ranks_save_modify_sql_ary'	=> 'acp_ranks_save_modify_sql_ary',
-			'core.acp_ranks_edit_modify_tpl_ary'	=> 'acp_ranks_edit_modify_tpl_ary',
-			'core.acp_ranks_list_modify_rank_row'	=> 'acp_ranks_list_modify_rank_row',
+			'core.acp_ranks_save_modify_sql_ary'   => 'acp_ranks_save_modify_sql_ary',
+			'core.acp_ranks_edit_modify_tpl_ary'   => 'acp_ranks_edit_modify_tpl_ary',
+			'core.acp_ranks_list_modify_rank_row'  => 'acp_ranks_list_modify_rank_row',
 
-			'core.viewtopic_cache_guest_data'		=> 'viewtopic_cache_user',
-			'core.viewtopic_cache_user_data'		=> 'viewtopic_cache_user',
-			'core.viewtopic_modify_post_row'		=> 'viewtopic_modify_post',
+			'core.viewtopic_cache_guest_data'      => 'viewtopic_cache_user',
+			'core.viewtopic_cache_user_data'       => 'viewtopic_cache_user',
+			'core.viewtopic_modify_post_row'       => 'viewtopic_modify_post',
 
-			'core.memberlist_prepare_profile_data'	=> 'memberlist_prepare_profile',
+			'core.memberlist_prepare_profile_data' => 'memberlist_prepare_profile',
 
-			'core.search_get_posts_data'			=> 'search_get_posts_data',
-			'core.search_modify_tpl_ary'			=> 'search_modify_tpl_ary',
+			'core.search_get_posts_data'           => 'search_get_posts_data',
+			'core.search_modify_tpl_ary'           => 'search_modify_tpl_ary',
 		);
 	}
 
@@ -115,12 +114,13 @@ class listener implements EventSubscriberInterface
 	{
 		$array = $event['sql_array'];
 		$array['SELECT'] .= ', u.user_rank';
-		$event['sql_array'] = $array; 
+		$event['sql_array'] = $array;
 	}
 
 	public function search_modify_tpl_ary($event)
 	{
-		if ($event['show_results'] == 'posts') {
+		if ($event['show_results'] == 'posts')
+		{
 			$tpl_ary = $event['tpl_ary'];
 			$tpl_ary['RANK_STYLE'] = $this->get_rank_style($event['row']['user_rank']);
 			$event['tpl_ary'] = $tpl_ary;
