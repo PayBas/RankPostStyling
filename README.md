@@ -24,6 +24,7 @@ This extension is only for those that are familiar with HTML and CSS. No support
 
 #### Languages supported
 - English
+- Spanish
 
 ## Installation
 1. [Download the latest release](https://github.com/PayBas/RankPostStyling/releases) and unzip it.
