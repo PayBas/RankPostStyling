@@ -1,7 +1,7 @@
 <?php
 /**
 *
-* Rank Post Styling [English]
+* Rank Post Styling [Spanish]
 * @copyright (c) 2014 PayBas
 * @license http://opensource.org/licenses/gpl-2.0.php GNU General Public License v2
 *
