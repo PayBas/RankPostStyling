@@ -30,7 +30,7 @@ class release_1_0_0 extends \phpbb\db\migration\migration
 			),
 		);
 	}
-	
+
 	public function revert_schema()
 	{
 		return array(
