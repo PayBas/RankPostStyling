@@ -2,7 +2,7 @@
 /**
  *
  * @package Rank Post Styling
- * Spanish translation by Raul [ThE KuKa] (www.phpbb-es.com)
+ * Croatian translation by Ančica Sečan (http://ancica.sunceko.net)
  *
  * @copyright (c) 2015 PayBas
  * @license GNU General Public License, version 2 (GPL-2.0)
@@ -35,5 +35,5 @@ if (empty($lang) || !is_array($lang))
 // in a url you again do not need to specify an order e.g., 'Click %sHERE%s' is fine
 
 $lang = array_merge($lang, array(
-	'RANK_STYLE'	=> 'Estilo del rango (clase CSS)',
+	'RANK_STYLE'	=> 'Stil statusa (CSS klasa)',
 ));
