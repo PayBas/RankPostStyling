@@ -2,7 +2,7 @@
 /**
  *
  * @package Rank Post Styling
- * English translation by PayBas
+ * Italian translation by Mauron
  *
  * @copyright (c) 2015 PayBas
  * @license GNU General Public License, version 2 (GPL-2.0)
